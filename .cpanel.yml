@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/naptxsog/repositories/naptimedotdev
-    - /bin/cp -R $DEPLOYPATH
+    - gatsby build
+    - /bin/cp -R public $DEPLOYPATH
