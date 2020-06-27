@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAFF;
+    color: #30323D;
+}
+a {
+    color: #bf4e30;
+    text-shadow: none;
+    border-bottom: none;
+    line-height: 1.1rem;
+}
+
+/* vermillion: bf4e30
+*magnolia: FFFAFF
+*yellow crayola: FFF07C
+*jet: 30323D
+*light coral: EF6F6C
+*/
