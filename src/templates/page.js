@@ -1,19 +1,21 @@
 import React from 'react';
 import Layout from '../components/main-layout';
 import pageTemplateStyles from './page.module.css';
+import resume from '../../static/Resume-2020.pdf';
 
 export default function Page ({ data }) {
-    const { markdownRemark } = data; // data.markdownRemark holds your post data
+    console.log(data);
+    const { markdownRemark } = data;
     const { html, frontmatter } = markdownRemark;
-
-    console.log(pageTemplateStyles);
     return (
         <Layout>
-            <section id="contact-heading">
-                <h1 className={pageTemplateStyles.h1}>{frontmatter.title}</h1>
-                <div className={pageTemplateStyles.headerInfoText}>{frontmatter.website}</div>
-                <div className={pageTemplateStyles.headerInfoText}>{frontmatter.email}</div>
+            <section className={ pageTemplateStyles.contactHeading }>
+                <h1 className={ pageTemplateStyles.h1 }>{ frontmatter.title }</h1>
+                <div className={ pageTemplateStyles.headerInfoText }>{ frontmatter.website }</div>
+                <div className={ pageTemplateStyles.headerInfoText }>{ frontmatter.email }</div>
+                <a href={ resume } download>Download Resume</a>
             </section>
+
             <section dangerouslySetInnerHTML={{ __html: html }} />
         </Layout>
     )

@@ -6,12 +6,11 @@ section {
     padding: 0 15em;
 }
 
-
 h1, .h1, h2, h3 {
     margin-top: 1em;
 }
 h1 {
-    margin-bottom: .5em;
+    margin-bottom: 0;
     font-size: 2.25em;
     text-align: center;
 }
@@ -52,22 +51,37 @@ li > p, li li {
     font-size: 1em;
 }
 
-
 ul {
     margin-bottom: 1em;
 }
 li {
     margin-bottom: 0;
 }
-#contact-heading {
-    text-align: center;
+.contactHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 a {
     color: #30323D;
     text-decoration: none;
+    transition: background-color .3s ease;
+    text-align: center;
+}
+a[download] {
+    background: #bf4e30;
+    color: #FFFAFF;
+    padding: 3px 5px;
+    font-size: 1.5em;
+    border: 2px solid #EF6F6C;
+    align-self: center;
+    margin-top: .75rem;
+}
+a[download]:hover {
+    background-color: #EF6F6C;
 }
 .headerInfoText {
-    margin-bottom: .5em;
+    margin-bottom: 0;
     margin-top: .5rem;
     font-size: 1.4em;
     line-height: 1.1;
