@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'nap.dev',
+    siteUrl: 'nap.dev',
+    description: 'Nathan Phelps, rest for your weary site.',
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
