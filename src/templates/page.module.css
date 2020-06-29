@@ -44,6 +44,14 @@ p, li {
     text-align: justify;
     font-size: 1.4em;
 }
+li ul {
+    margin-top: .5rem;
+}
+li > p, li li {
+    margin-bottom: .2em;
+    font-size: 1em;
+}
+
 
 ul {
     margin-bottom: 1em;

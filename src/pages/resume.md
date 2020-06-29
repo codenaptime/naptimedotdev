@@ -193,7 +193,7 @@ July 2012 - November 2012
   - C# and the .NET 4.0 framework
   - ASP.Net: Membership, directory security, data controls, custom error handling, and master page.
 
-## Volunteer Experience:**
+## Volunteer Experience
 
 **World Revival Church – Action Kids Academy** , Kansas City, MO  
 Spring 2014 - Present
