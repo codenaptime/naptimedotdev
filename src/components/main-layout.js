@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Header from './header';
+import {Helmet} from 'react-helmet';
 
 export default function Layout({ children }) {
         return (
