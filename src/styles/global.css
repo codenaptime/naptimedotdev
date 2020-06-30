@@ -10,6 +10,11 @@ a {
     border-bottom: none;
     line-height: 1.1rem;
 }
+main {
+    width: 80%;
+    max-width: 900px;
+    margin: 1rem auto;
+}
 
 /* vermillion: bf4e30
 *magnolia: FFFAFF

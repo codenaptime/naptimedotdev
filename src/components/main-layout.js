@@ -11,7 +11,8 @@ export default function Layout({ children }) {
                 </Helmet>
                 <Header />
                 <main>
-                { children }</main>
+                { children }
+                </main>
                 <footer></footer>
             </Fragment>
         )
