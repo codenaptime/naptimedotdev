@@ -10,6 +10,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .titleTag {
     margin: 0 auto 0 1rem;
@@ -27,6 +28,7 @@ img {
     align-self: stretch;
     display: flex;
     align-items: flex-end;
+    margin-left: auto;
 }
 
 .headerNav a {

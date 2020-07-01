@@ -1,9 +1,6 @@
 main {
     font-size: 10px;
 }
-section {
-    padding: 0 15em;
-}
 
 h1, .h1, h2, h3 {
     margin-top: 1em;
@@ -86,3 +83,5 @@ a[download]:hover {
     line-height: 1.1;
     text-align: center;
 }
+
+
