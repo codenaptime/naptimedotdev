@@ -1,6 +1,0 @@
-<svg width="50" height="50" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="tranparent">
-  <circle cx="25" cy="25" r="25" fill="#fff07c" />
-  <path d="M12 12 L24 12 16 22 27 22" stroke="#30323D" stroke-width="5px" fill="transparent" />
-  <path d="M31 20 L41 20 34 29 44 29" stroke="#30323D" stroke-width="4px" fill="transparent" />
-  <path d="M22 36 L33 36 24 44 34 44" stroke="#30323D" stroke-width="3px" fill="transparent" />
-</svg>
