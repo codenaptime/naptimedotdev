@@ -11,6 +11,8 @@ img {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    grid-area: header;
+    max-height: 80px;
 }
 .titleTag {
     margin: 0 auto 0 1rem;

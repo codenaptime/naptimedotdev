@@ -1,0 +1,19 @@
+.footer {
+    background-color: #EF6F6C;
+    padding: 30px;
+    margin-top: auto;
+    grid-area: footer;
+}
+
+.footerIcon {
+    height: 50px;
+}
+
+li {
+    list-style-type: none;
+    height: 30px;
+}
+.footer ul {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 70px);
+}

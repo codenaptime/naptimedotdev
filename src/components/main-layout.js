@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import Header from './header';
+import Footer from './footer';
+import Aside from './aside';
 import {Helmet} from 'react-helmet';
 
 export default function Layout({ children }) {
@@ -11,9 +13,10 @@ export default function Layout({ children }) {
                 </Helmet>
                 <Header />
                 <main>
-                { children }
+                    { children }
                 </main>
-                <footer></footer>
+                <Aside></Aside>
+                <Footer />
             </Fragment>
         )
 }

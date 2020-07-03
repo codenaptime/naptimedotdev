@@ -1,0 +1,183 @@
+.container {
+  /* transform: rotate(-75deg); */
+  height: 180px;
+  width: 350px;
+  overflow: hidden;
+  /*margin: 30px auto 100px;*/
+  position: relative;
+}
+
+.base {
+  z-index: 10;
+  background-color: #bf4e30;
+  width: 200px;
+  height: 50px;
+  border-radius: 23px;
+  position: absolute;
+  bottom: 0;
+}
+
+.base:before{
+    content: '';
+    color: #FFFAFF;
+    border-top: 3px solid #FFFAFF;
+  border-left: 3px solid #FFFAFF;
+  transform: rotate(-45deg);
+    padding: 7px;
+  position: absolute;
+  right: 40px;
+  top: 17px;
+}
+.base:after{
+    content: '';
+    color: #FFFAFF;
+    border: 3px solid #FFFAFF;
+  border-left: none;
+    padding: 9px;
+  position: absolute;
+  right: 27px;
+  top: 14px;
+}
+
+.plus {
+  z-index: 20;
+  width: 14px;
+  position: absolute;
+  bottom: 23px;
+  left: 154px;
+  border-top: 3px solid #FFFAFF;
+}
+.plus:after {
+  content: '';
+  z-index: 20;
+  width: 12px;
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  border-top: 3px solid #FFFAFF;
+  transform: rotate(90deg);
+}
+
+.fliptool {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  transition: all .3s ease;
+}
+
+.blade {
+  z-index: 6;
+  background-color: gray;
+  width: 159px;
+  height: 45px;
+  border-radius: 0 0 150px 150px;
+}
+
+.saw {
+    z-index: 9;
+  background-color: darkgray;
+  width: 159px;
+  height: 25px;
+  border-radius: 0 0 150px 150px;
+}
+.saw::before {
+  z-index: 9;
+  content: '';
+  background-color: darkgray;
+  padding: 25px 6px 23px 20px;
+    border-radius: 0 0px 0px 35px;
+    top: 0px;
+    right: 0;
+  position: absolute;
+}
+.saw::after, .sawTooth, .sawTooth::before, .sawTooth::after {
+  content: '';
+  border: 12px solid transparent;
+  padding: 0;
+  line-height: 0;
+  height: 0;
+  width: 0;
+  border-top: 8px solid darkgray;
+  position: absolute;
+}
+.saw::after {
+  top: 100%;
+  left:20px;
+}
+.sawTooth {
+top: 100%;
+  left:45px;
+}
+.sawTooth::after {
+  top: -8px;
+  left: 40px;
+}
+.sawTooth::before {
+  top: -8px;
+  left: 15px;
+}
+
+.corkScrew {
+      z-index: 9;
+  background-color: lightgray;
+  width: 30px;
+  height: 25px;
+}
+.corkScrew:before, .corkScrew:after, .corkScrewCurl,
+.corkScrewCurl:before, .corkScrewCurl:after, .corkScrewTip {
+  content: '';
+  border: 12px solid transparent;
+  padding: 0;
+  line-height: 0;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+.corkScrew:before {
+  border-top: 15px solid #FFFAFF;
+  top: 0;
+  left: 80px;
+}
+
+.corkScrew:after {
+  border-bottom: 15px solid #FFFAFF;
+  top: 0;
+  left: 100px;
+}
+.corkScrewCurl {
+  border-bottom: 15px solid #FFFAFF;
+  top: 0;
+  left: 60px;
+}
+.corkScrewCurl:before {
+  border-top: 15px solid #FFFAFF;
+  bottom: -14px;
+  left: -40px;
+}
+.corkScrewCurl:after {
+  border-bottom: 15px solid #FFFAFF;
+  bottom: -15px;
+  left: -60px;
+}
+
+.corkScrewTip {
+  z-index: 10;
+  border-bottom: 15px solid #FFFAFF;
+  transform: rotate(-45deg);
+  top: -15px;
+  left: -14px;
+}
+
+.open {
+  width: 162px;
+  transform-origin: center right;
+  transform: rotate(180deg);
+}
+
+.saw.open {
+  transform: rotate(135deg);
+}
+
+.corkScrew.open {
+  transform: rotate(90deg);
+}

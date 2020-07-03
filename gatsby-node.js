@@ -6,7 +6,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     if(node.internal.type === 'MarkdownRemark') {
         
-    console.log(node.internal.type);
         const slug = createFilePath({ node, getNode, basePath: `pages` });
         console.log(slug);
         createNodeField({node, name: 'slug', value: slug});
@@ -15,7 +14,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
-    const pageTemplate = path.resolve('./src/templates/page.js');
 
     const result = await graphql(`
       query {
@@ -32,6 +30,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     `);
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const nodeSlug = node.fields.slug;
+      const templatePath = nodeSlug === '/resume/' ?
+        './src/templates/resumeTemplate.js' : './src/templates/mdTemplate.js';
+      const pageTemplate = path.resolve(templatePath);
       createPage({
         path: node.fields.slug,
         component: pageTemplate,

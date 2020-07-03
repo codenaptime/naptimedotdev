@@ -4,6 +4,15 @@ body, html {
     background-color: #FFFAFF;
     color: #30323D;
 }
+#gatsby-focus-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header header header header header"
+        "aside main main main beside"
+        "footer footer footer footer footer";
+}
+
 a {
     color: #bf4e30;
     text-shadow: none;
@@ -14,6 +23,10 @@ section {
     width: 80%;
     max-width: 900px;
     margin: 1rem auto;
+}
+main{
+    flex: 1;
+    grid-area: main;
 }
 
 /* vermillion: bf4e30
