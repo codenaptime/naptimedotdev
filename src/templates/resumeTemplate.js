@@ -9,14 +9,16 @@ export default function Page ({ data }) {
     const { html, frontmatter } = markdownRemark;
     return (
         <Layout>
-            <section className={ resumeTemplateStyles.contactHeading }>
-                <h1 className={ resumeTemplateStyles.h1 }>{ frontmatter.title }</h1>
-                <div className={ resumeTemplateStyles.headerInfoText }>{ frontmatter.website }</div>
-                <div className={ resumeTemplateStyles.headerInfoText }>{ frontmatter.email }</div>
-                <a href={ resume } download>Download Resume</a>
+            <section className={ resumeTemplateStyles.resume }>
+                <div className={ resumeTemplateStyles.resumeHeaderContainer }>
+                    <h1 className={ resumeTemplateStyles.h1 }>{ frontmatter.title }</h1>
+                    <div className={ resumeTemplateStyles.headerInfoText }>{ frontmatter.website }</div>
+                    <div className={ resumeTemplateStyles.headerInfoText }>{ frontmatter.email }</div>
+                    <a className={ resumeTemplateStyles.downloadLink } href={ resume } download>Download Resume</a>
+                </div>
             </section>
 
-            <section dangerouslySetInnerHTML={{ __html: html }} />
+            <section className={ resumeTemplateStyles.resume } dangerouslySetInnerHTML={{ __html: html }} />
         </Layout>
     )
 }

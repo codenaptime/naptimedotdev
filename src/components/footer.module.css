@@ -1,19 +1,31 @@
 .footer {
-    background-color: #EF6F6C;
-    padding: 30px;
+    background-color: #FFF07C;
+    padding: 30px 30px 20px;
     margin-top: auto;
     grid-area: footer;
 }
 
-.footerIcon {
-    height: 50px;
+.footerNav {
+    display: grid;
+    justify-content: end;
 }
 
-.footer li {
-    list-style-type: none;
-    height: 30px;
+.footerNav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 70px) repeat(2, 60px);
+    margin-bottom: 0;
 }
-.footer ul {
-    display: inline-grid;
-    grid-template-columns: repeat(3, 70px);
+
+.footerIcon {
+    height: 40px;
+}
+
+.footerNav li {
+    list-style-type: none;
+    height: 40px;
+}
+
+.footerNav li a {
+    box-shadow: none;
+    margin: auto;
 }

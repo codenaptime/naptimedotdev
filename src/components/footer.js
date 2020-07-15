@@ -5,7 +5,7 @@ import footerStyles from './footer.module.css';
 export default function Footer () {
     return (
         <footer className={footerStyles.footer}>
-            <nav>
+            <nav className={footerStyles.footerNav}>
                 <ul>
                     <li>
                         <Link to="https://codepen.io/mcphelpsius">
@@ -14,7 +14,17 @@ export default function Footer () {
                     </li>
                     <li>
                         <Link to="https://github.com/McPhelpsius">
-                            <img className={footerStyles.footerIcon} src="/developer-community-github.png"></img>
+                            <img className={footerStyles.footerIcon} alt="Github Profile" src="/developer-community-github.png"></img>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="https://dev.to/codenaptime">
+                        <img className={footerStyles.footerIcon} src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="DEV Profile" height="30" width="30"></img>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="https://twitter.com/codenaptime">
+                            <img className={footerStyles.footerIcon} src="/black-twitter-bird.png" alt="Twitter Profile"/>
                         </Link>
                     </li>
                 </ul>

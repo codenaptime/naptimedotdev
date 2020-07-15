@@ -4,15 +4,18 @@ img {
 
 
 .header {
-    background: #bf4e30;
+    background: #242f40;
     color: #FFFAFF;
-    padding: 15px 30px;
+    padding: 20px 30px 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     grid-area: header;
-    max-height: 80px;
+    box-shadow: 0 0 12px 0 #888;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .titleTag {
     margin: 0 auto 0 1rem;
@@ -29,14 +32,21 @@ img {
 .headerNav {
     align-self: stretch;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     margin-left: auto;
+}
+
+.headerNav ul {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 0;
 }
 
 .headerNav a {
     color: #FFFAFF;
     transition: all .3s ease;
     text-decoration: none;
+    margin: 0 10px;
 }
 
 .headerNav a:hover {

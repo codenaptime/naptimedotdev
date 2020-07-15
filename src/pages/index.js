@@ -26,7 +26,7 @@ export default function Home() {
           <li>Vue</li>
           <li>Gatsby (React and GraphQL)</li>
           <li>CSS Grid (not to spite flexbox)</li>
-          <li>Hand-coding SVGs (glutton for punishment?)</li>
+          <li>Accessibility</li>
           <li>Imposter Syndrome</li>
         </ul>
       </section>

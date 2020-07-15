@@ -1,82 +1,98 @@
-main {
+.resume {
     font-size: 10px;
 }
 
-h1, .h1, h2, h3 {
+.resumeHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.resume h1, .resume .h1, .resume h2, .resume h3 {
     margin-top: 1em;
 }
-h1 {
+
+.resume h1 {
     margin-bottom: 0;
     font-size: 2.25em;
     text-align: center;
 }
-h2 {
+
+.resume h2 {
     margin-bottom: .6em;
     font-size: 2em;
     text-align: center;
 }
-h3 {
+
+.resume h3 {
     margin-bottom: .4em;
     font-size: 1.8em;
 }
 
-h4, h5, h6 {
+.resume h4, .resume h5, .resume h6 {
     margin-top: 0.4em;
     margin-bottom: .3em;
     margin-left: .8em;
     font-size: 1.7em;
 }
 
-table {
+.resume table {
     font-size: 1.4em;
 }
-th, td {
+
+.resume th, .resume td {
     padding: 1em 1.5em;
     line-height: 1.5;
 }
-p, li {
+
+.resume p, .resume li {
     margin-bottom: .5em;
     text-align: justify;
     font-size: 1.4em;
 }
-li ul {
+
+.resume li ul {
     margin-top: .5rem;
 }
-li > p, li li {
+
+.resume li > p, .resume li li {
     margin-bottom: .2em;
     font-size: 1em;
 }
 
-ul {
+
+.resume ul {
     margin-bottom: 1em;
 }
-li {
+
+.resume li {
     margin-bottom: 0;
 }
-.contactHeading {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-a {
+
+
+.resume a {
     color: #30323D;
     text-decoration: none;
     transition: background-color .3s ease;
     text-align: center;
 }
-a[download] {
-    background: #bf4e30;
+
+.resume a[download] {
+    background: #0BAFC1;
     color: #FFFAFF;
-    padding: 3px 5px;
+    padding: 10px 15px;
     font-size: 1.5em;
-    border: 2px solid #EF6F6C;
+    border: 2px solid #242f40;
+    border-radius: 5px;
     align-self: center;
     margin-top: .75rem;
 }
-a[download]:hover {
-    background-color: #EF6F6C;
+
+.resume a[download]:hover {
+    background-color: #242f40;
 }
-.headerInfoText {
+
+.resume .headerInfoText {
     margin-bottom: 0;
     margin-top: .5rem;
     font-size: 1.4em;

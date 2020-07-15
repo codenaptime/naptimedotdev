@@ -1,7 +1,7 @@
 ---
 title: "Nathan Andrew Phelps"
 website: "mcphelpsius.github.io || codepen.io/mcphelpsius "
-email: "nathanaphelps@gmail.com"
+email: "nathan@naptime.dev"
 name: "resume"
 ---
 
