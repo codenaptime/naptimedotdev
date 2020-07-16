@@ -3,7 +3,26 @@
     padding: 30px 30px 20px;
     margin-top: auto;
     grid-area: footer;
+    display: flex;
+    align-items: center;
 }
+
+.footer a {
+    box-shadow: none;
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+}
+
+.emailHeader {
+    margin: 10px;
+}
+
+.followHeader {
+    margin: 10px 0 10px auto;
+}
+
 
 .footerNav {
     display: grid;
@@ -12,20 +31,32 @@
 
 .footerNav ul {
     display: grid;
-    grid-template-columns: repeat(2, 70px) repeat(2, 60px);
+    grid-template-columns: repeat(2, 50px) repeat(3, 45px);
     margin-bottom: 0;
 }
 
 .footerIcon {
-    height: 40px;
+    height: 30px;
 }
 
 .footerNav li {
     list-style-type: none;
-    height: 40px;
+    height: 25px;
 }
 
 .footerNav li a {
     box-shadow: none;
     margin: auto;
+    height: 41px;
+}
+
+.footer img, .footer svg {
+    transition: all .2s linear;
+    height: 35px;
+    padding: 3px;
+}
+
+.footer img:hover, .footer svg:hover {
+    background: #FFF;
+    box-shadow: 0 0 10px 6px #FFF;
 }

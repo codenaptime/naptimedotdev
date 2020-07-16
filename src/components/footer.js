@@ -5,7 +5,12 @@ import footerStyles from './footer.module.css';
 export default function Footer () {
     return (
         <footer className={footerStyles.footer}>
-            <nav className={footerStyles.footerNav}>
+            <h2 className={footerStyles.emailHeader}>Email me!</h2>
+            <a href="mailto:nathan@naptime.dev">
+                <img className={footerStyles.footerIcon} src="/envelope-pigeon.png" alt="Email nathan@naptime.dev"/>
+            </a>
+            <h2 className={footerStyles.followHeader}>Follow Me on:</h2>
+            <nav className={footerStyles.footerNav} aria-label="Follow Me on Social Media">
                 <ul>
                     <li>
                         <Link to="https://codepen.io/mcphelpsius">
@@ -14,7 +19,7 @@ export default function Footer () {
                     </li>
                     <li>
                         <Link to="https://github.com/McPhelpsius">
-                            <img className={footerStyles.footerIcon} alt="Github Profile" src="/developer-community-github.png"></img>
+                            <img className={footerStyles.footerIcon} alt="Github Profile" src="/developer-community-github-1.png"></img>
                         </Link>
                     </li>
                     <li>
@@ -24,7 +29,12 @@ export default function Footer () {
                     </li>
                     <li>
                         <Link to="https://twitter.com/codenaptime">
-                            <img className={footerStyles.footerIcon} src="/black-twitter-bird.png" alt="Twitter Profile"/>
+                            <img className={footerStyles.footerIcon} src="/social-media-twitter.png" alt="Twitter Profile"/>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="https://www.linkedin.com/in/nathan-phelps/">
+                            <img className={footerStyles.footerIcon} src="/professional-network-linkedin.png" alt="Twitter Profile"/>
                         </Link>
                     </li>
                 </ul>

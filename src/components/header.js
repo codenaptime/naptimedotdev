@@ -21,7 +21,7 @@ export default function Header () {
             return <Link to={`/${node.name}`}>{nameWithoutDashes}</Link>
         });
     return(
-                    <header className={headerStyles.header}>
+        <header className={headerStyles.header}>
             <Link className={headerStyles.siteLink} to="/">
                 <img src="/snooze.svg" alt="Website icon" />
                 <div className={headerStyles.titleTag}>
