@@ -1,0 +1,61 @@
+.cardHolder {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 1fr);
+    list-style-type: none;
+    column-gap: 3%;
+}
+
+.card {
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0px #30323D;
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+}
+
+.cardHeader {
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    z-index: 5;
+    color: #FFFAFF;
+}
+
+.cardText {
+    position: relative;
+    z-index: 5;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFAFF;
+}
+
+.cardInner{
+    transition: all .2s linear;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    background:rgba(0, 0, 0, .8);
+}
+
+.cardInner:hover {
+    opacity: 1;
+}

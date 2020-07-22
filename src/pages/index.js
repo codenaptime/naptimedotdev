@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from '../components/main-layout';
+import TechCards from '../components/tech-crush-cards';
 
 export default function Home() {
   return (
@@ -18,17 +19,11 @@ export default function Home() {
           easy-to-use development environment for projects to come so that anyone can come in and contribute on day one.
         </p>
       </section>
-      <section>
+      <section class="card-section">
         <h2>
           My most recent tech crushes are:
         </h2>
-        <ul>
-          <li>Vue</li>
-          <li>Gatsby (React and GraphQL)</li>
-          <li>CSS Grid (not to spite flexbox)</li>
-          <li>Accessibility</li>
-          <li>Imposter Syndrome</li>
-        </ul>
+        <TechCards />
       </section>
     </Layout>
   )
