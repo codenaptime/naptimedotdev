@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from '../components/main-layout';
+import Layout from '../components/aside-layout';
 import TechCards from '../components/tech-crush-cards';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
           easy-to-use development environment for projects to come so that anyone can come in and contribute on day one.
         </p>
       </section>
-      <section class="card-section">
+      <section className="card-section">
         <h2>
           My most recent tech crushes are:
         </h2>

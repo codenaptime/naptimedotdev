@@ -32,11 +32,16 @@ main{
     grid-area: main;
 }
 
-.card-section {
-    width: 100%;
-    max-width: none;
-    margin: 0;
+aside {
+    margin-top: 95px;
+    grid-area: aside;
 }
+
+// .card-section {
+//     // width: 100%;
+//     // max-width: none;
+//     margin: 0;
+// }
 
 /* vermillion: bf4e30
 *magnolia: FFFAFF

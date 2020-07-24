@@ -32,15 +32,15 @@ export default function TechCards () {
 
     return (
         <div className={techCardsStyles.cardRow}>
-          <ul className={techCardsStyles.cardHolder}>
-            {techArray.map(tech => <li className={techCardsStyles.card} style={{backgroundImage: `url(${tech.backgroundImage})`}}>
-                    <div className={techCardsStyles.cardInner}>
-                        <h3 className={techCardsStyles.cardHeader}>{tech.title}</h3>
-                        <p className={techCardsStyles.cardText}>{tech.description}</p>
-                    </div>
-                </li>
-            )}
-          </ul>
-          </div>
+            <ul className={techCardsStyles.cardHolder}>
+                {techArray.map(tech => <li key={techCardsStyles.title} className={techCardsStyles.card} style={{backgroundImage: `url(${tech.backgroundImage})`}}>
+                        <div className={techCardsStyles.cardInner}>
+                            <h3 className={techCardsStyles.cardHeader}>{tech.title}</h3>
+                            <span className={techCardsStyles.cardText}>{tech.description}</span>
+                        </div>
+                    </li>
+                )}
+            </ul>
+        </div>
     );
 }
