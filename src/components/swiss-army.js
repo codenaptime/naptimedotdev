@@ -8,29 +8,18 @@ export default class SwissArmy extends Component {
             stages: ['start', 'blade', 'saw', 'corkscrew', 'open'],
             scale: 1
         };
-        // this.content = document.querySelector('main');
         this.scrolling = false;
     }
     
     scrollFliptools(e) {
         e.preventDefault();
-        // this.setState((state) => ({...state, scale: state.scale += e.deltaY * -0.01}));
-        console.info(e.deltaY);
-        // this.setState((state) => ({...state, scale: Math.min(Math.max(.125, state.scale), 4)}));
-        e.target.style.transform = `scale(${this.state.scale})`;
         
         if (this.scrolling === false) {
-            // relative to section header and top
-            // sticky header
-            // symbol on tool
-            // let closedTool = undefined;
-            // closedTool = this.tools.reverse().find(b => [...b.classList].indexOf(swissArmyStyles.open) < 0);
-            
-            // const closedTool = this.tools.find(b => [...b.classList].indexOf(swissArmyStyles.open) < 0);
+            // TODO: symbol on tool
+
             const closedToolIndex = this.findClosedToolIndex();
-            // const closedToolIndex = this.tools.indexOf(this.tools.find(b => [...b.classList].indexOf(swissArmyStyles.open) < 0));
             const openedToolIndex = closedToolIndex > 0 ? closedToolIndex-1 : closedToolIndex;
-            console.log(openedToolIndex, openedToolIndex >= 0);
+
             if(openedToolIndex >= 0) {
                 if(e.deltaY < 0) {
                     this.tools[openedToolIndex].classList.remove(swissArmyStyles.open);
@@ -39,10 +28,13 @@ export default class SwissArmy extends Component {
                     this.tools[closedToolIndex].classList.add(swissArmyStyles.open);
                 }
             }
+            else if(e.deltaY < 0) {
+                this.tools[this.tools.length-1].classList.remove(swissArmyStyles.open);
+            }
             this.scrolling = true;
             setTimeout(() => {
                 this.scrolling = false;
-            }, 500);
+            }, 750);
         }
     }
 
@@ -56,39 +48,40 @@ export default class SwissArmy extends Component {
         }
     }
 
-    findClosedToolIndex = () => this.tools.indexOf(this.tools.find(b => [...b.classList].indexOf(swissArmyStyles.open) < 0));
+    
+    findClosedToolIndex = () => {
+        return this.tools.indexOf(this.tools.find(b => [...b.classList].indexOf(swissArmyStyles.open) < 0));
+    };
     
     componentDidMount() {
         const content = document.querySelector('main');
         this.tools = [...document.querySelectorAll(`.${swissArmyStyles.fliptool}`)];
-        // const tools = [...document.querySelectorAll(`.${swissArmyStyles.fliptool}`)];
-        // var scrolling = false;
         content.addEventListener('wheel', (e) => this.scrollFliptools(e, this.state));
-
-        // const base = document.querySelector(`.${swissArmyStyles.base}`);
-        // base.addEventListener('click', (e) => this.clickFliptools(e));
-
     }
 
     render() {
         return(
             <section className={swissArmyStyles.larger}>
-                <div className={swissArmyStyles.container} onClick={(e) => this.clickFliptools(e)}>
+                <div className={swissArmyStyles.container}>
                     {/* <!-- Red base --> */}
-                    <div className={swissArmyStyles.base}></div>
+                    <button type="button" className={swissArmyStyles.base} onClick={(e) => this.clickFliptools(e)}></button>
                     {/* <!--  symbol --> */}
                     <div className={swissArmyStyles.plus}></div>
                     {/* <!--  Blade --> */}
-                    <div className={`${swissArmyStyles.blade} ${swissArmyStyles.fliptool}`}></div>
+                    <a href="https://vuejs.org/" className={`${swissArmyStyles.blade} ${swissArmyStyles.fliptool}`}>
+                        <img className={`${swissArmyStyles.fliptoolImage} ${swissArmyStyles.fliptoolImageVue}`} src="/vue-282497.png" />
+                    </a>
                     {/* <!-- saw --> */}
-                    <div className={`${swissArmyStyles.saw} ${swissArmyStyles.fliptool}`}>
+                    <a href="https://reactjs.org/" className={`${swissArmyStyles.saw} ${swissArmyStyles.fliptool}`}>
                         <div className={swissArmyStyles.sawTooth}></div>
-                    </div>
+                        <img className={`${swissArmyStyles.fliptoolImage} ${swissArmyStyles.fliptoolImageReact}`} src="/react.svg" />
+                    </a>
                     {/* <!-- cork screw --> */}
-                    <div className={`${swissArmyStyles.corkScrew} ${swissArmyStyles.fliptool}`}>
+                    <a href="https://graphql.org/" className={`${swissArmyStyles.corkScrew} ${swissArmyStyles.fliptool}`}>
                         <div className={swissArmyStyles.corkScrewCurl}></div>
                         <div className={swissArmyStyles.corkScrewTip}></div>
-                    </div>
+                        <img className={`${swissArmyStyles.fliptoolImage} ${swissArmyStyles.fliptoolImageGraphQl}`} src="/graphql.svg" />
+                    </a>
                 </div>
             </section>
         );

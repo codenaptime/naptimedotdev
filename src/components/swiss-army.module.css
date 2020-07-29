@@ -1,9 +1,7 @@
 .container {
-  /* transform: rotate(-75deg); */
   height: 180px;
   width: 350px;
   overflow: hidden;
-  /*margin: 30px auto 100px;*/
   position: relative;
 }
 
@@ -15,6 +13,8 @@
   border-radius: 23px;
   position: absolute;
   bottom: 0;
+  outline: none;
+  border: none;
 }
 
 .base:before{
@@ -63,6 +63,33 @@
   bottom: 0;
   left: 20px;
   transition: all .3s ease;
+  transform-origin: center right;
+  box-shadow: none;
+}
+
+.fliptoolImage {
+  position: absolute;
+  z-index: 10;
+  width: 30px;
+  transform: rotate(-90deg);
+}
+
+.fliptoolImageVue {
+  top: 7px;
+  left: 40px;
+}
+
+.fliptoolImageReact {
+  top: 3px;
+  left: 30px;
+  width: 25px;
+  transform: rotate(0deg);
+}
+
+.fliptoolImageGraphQl {
+  top: 0;
+  left: 25px;
+  width: 25px;
 }
 
 .blade {
@@ -170,7 +197,6 @@ top: 100%;
 
 .open {
   width: 162px;
-  transform-origin: center right;
   transform: rotate(180deg);
 }
 
