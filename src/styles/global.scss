@@ -1,7 +1,11 @@
-body, html {
+@import "variables.scss";
+@import "blog-styles.scss";
+
+body,
+html {
     margin: 0;
     padding: 0;
-    background-color: #FFFAFF;
+    background-color: $white;
     color: #30323D;
 }
 
@@ -10,26 +14,30 @@ body, html {
     display: grid;
     grid-template-areas:
         "header header header header header"
-        "aside main main main beside"
+        "main main main main aside "
         "footer footer footer footer footer";
 }
 
 a {
-    color: #bf4e30;
+    color: $brown;
     text-shadow: none;
     border-bottom: none;
     line-height: 1.1rem;
 }
 
 section {
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     margin: 0 auto 1rem;
 }
 
-main{
+main {
     margin-top: 95px;
     grid-area: main;
+}
+
+footer {
+    background-color: $dullWhite;
 }
 
 aside {
@@ -37,15 +45,7 @@ aside {
     grid-area: aside;
 }
 
-// .card-section {
-//     // width: 100%;
-//     // max-width: none;
-//     margin: 0;
-// }
-
-/* vermillion: bf4e30
-*magnolia: FFFAFF
-*yellow crayola: FFF07C
-*jet: 30323D
-*light coral: EF6F6C
-*/
+.mdx-div {
+    background: blue;
+    border: 3px dotted red;
+}

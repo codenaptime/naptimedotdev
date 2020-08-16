@@ -13,19 +13,24 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-sass`,
-    'gatsby-transformer-remark',
+    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
       },
     },
   ],
