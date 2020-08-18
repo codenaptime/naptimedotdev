@@ -6,7 +6,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   if (node.internal.type === 'Mdx') {
     const slug = createFilePath({ node, getNode });
-    console.log('SLUG in ONCREADTENODE', slug);
     createNodeField({ node, name: 'slug', value: slug });
   }
 }
@@ -26,21 +25,23 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `);
 
-  // console.log(result.data.allMdx);
   result.data.allMdx.edges.forEach(({ node }) => {
-    const nodeSlug = node.slug.slice(node.slug.indexOf('/'));
-    const templatePath = nodeSlug.indexOf('resume') >= 0 ?
-      './src/templates/resumeTemplate.js' : './src/templates/mdxTemplate.js';
-    const pageTemplate = path.resolve(templatePath);
-    console.log(`${node.slug} --- ${nodeSlug}`)
-    console.log(`----- PATH: - ${templatePath}`);
-    console.log(`----- TEMPLATE: - ${pageTemplate}`);
+    let nodeSlug = node.slug;
+    let templatePath = './src/templates/mdxTemplate.js';
+
+    if (node.slug.indexOf('resume') >= 0) {
+      templatePath = './src/templates/resumeTemplate.js';
+
+      console.log(nodeSlug, node.slug, templatePath);
+    }
+
+
     createPage({
       path: nodeSlug,
-      component: pageTemplate,
+      component: path.resolve(templatePath),
       context: {
-        pagePath: nodeSlug,
+        pathSlug: nodeSlug,
       },
-    })
+    });
   });
 }

@@ -30,7 +30,8 @@ export default function Header() {
             <nav className={headerStyles.headerNav}>
                 <ul>
                     {/*links*/}
-                    <Link to="/resume">Go To Resume</Link>
+                    <Link to="/enter-the-bloggin">My Blog</Link>
+                    <Link to="/resume">Resume</Link>
                 </ul>
             </nav>
         </header>

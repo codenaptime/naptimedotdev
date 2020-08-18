@@ -6,7 +6,6 @@ import { Link } from "gatsby";
 
 export default function Page({ data }) {
     const { mdx: { body, frontmatter } } = data;
-    console.log(data);
     return (
         <Layout>
 
@@ -28,14 +27,16 @@ export default function Page({ data }) {
     );
 }
 
-export const resumeBody = graphql`
-query MdxQuery {
-    mdx(slug: {eq: "pages/blog/blog-1"}) {
+// issue: pulling in the same MDX (resume) every time
+export const data = graphql`
+  query MdxQuery($pathSlug: String!) {
+    mdx(slug: {eq: $pathSlug}) {
+      id
       body
       slug
       frontmatter {
-          title
-          description
+        title
+        description
       }
     }
-}`;
+  }`;

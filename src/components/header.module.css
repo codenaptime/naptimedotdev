@@ -13,10 +13,8 @@ img {
     flex-wrap: wrap;
     grid-area: header;
     box-shadow: 0 0 12px 0 #888;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
+
 .titleTag {
     margin: 0 auto 0 1rem;
     text-align: left;

@@ -15,15 +15,33 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'src/pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/src/blog/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'resume',
+        path: `${__dirname}/src/resume/`,
       },
     },
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [`.md`, `.mdx`],
+        extensions: ['.md', '.mdx'],
+        defaultLayouts: {
+          resume: require.resolve('./src/templates/resumeTemplate.js'),
+          default: require.resolve('./src/templates/mdxTemplate.js'),
+        }
       },
     },
     'gatsby-plugin-react-helmet',

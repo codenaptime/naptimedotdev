@@ -7,7 +7,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Link } from "gatsby";
 
 export default function Page({ data }) {
-    console.log(data);
     const { mdx: { body, frontmatter } } = data;
 
     return (
@@ -33,8 +32,8 @@ export default function Page({ data }) {
 }
 
 export const resumeBody = graphql`
-query {
-    mdx(slug: {eq: "pages/resume"}) {
+query ResumeQuery($pathSlug: String!){
+    mdx(slug: {eq: $pathSlug}) {
         body
         frontmatter {
             website
