@@ -31,7 +31,6 @@ export default function Header() {
                 <ul>
                     {/*links*/}
                     <Link to="/enter-the-bloggin">My Blog</Link>
-                    <Link to="/resume">Resume</Link>
                 </ul>
             </nav>
         </header>

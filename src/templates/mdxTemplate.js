@@ -11,9 +11,8 @@ export default function Page({ data }) {
 
             <div id="blog">
                 <section id="top-section">
-                    <h1>Naptime Blog</h1>
-                    <h2>{frontmatter.title}</h2>
-                    <description>{frontmatter.description}</description>
+                    <h1>{frontmatter.title}</h1>
+                    <h2>{frontmatter.description}</h2>
                 </section>
                 <section>
                     <MDXProvider>
