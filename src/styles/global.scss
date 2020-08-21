@@ -12,10 +12,12 @@ html {
 #gatsby-focus-wrapper {
     min-height: 100vh;
     display: grid;
+    grid-template-columns: 1fr repeat(3, 3fr) 1fr;
     grid-template-areas:
-        "header header header header header"
-        "main main main main aside "
-        "footer footer footer footer footer";
+        "header"
+        "main"
+        "actions"
+        "footer";
 }
 
 a {
@@ -26,20 +28,26 @@ a {
 }
 
 section {
-    width: 90%;
-    max-width: 900px;
     margin: 0 auto 1rem;
+}
+
+#actions {
+    grid-area: actions;
+    width: 1fr;
 }
 
 main {
     grid-area: main;
+    padding: 20px 30px;
 }
 
 footer {
-    background-color: $lightYellow;
+    background-color: $yellow;
+    grid-template-areas: "info" "social-media" "email" ;
 }
 
 aside {
+    display: none;
     margin-top: 95px;
     grid-area: aside;
 }
@@ -47,4 +55,25 @@ aside {
 .mdx-div {
     background: blue;
     border: 3px dotted red;
+}
+
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 959px){
+    aside {
+        display: none;
+    }
+    #gatsby-focus-wrapper {
+        grid-template-areas:
+            "header header header header header"
+            "actions main main main aside "
+            "footer footer footer footer footer";
+        grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+    }
+}
+
+@media only screen and (min-width: 1199px){
+     
 }

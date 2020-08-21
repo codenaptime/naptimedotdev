@@ -2,16 +2,13 @@ img {
     margin-bottom: 0;
 }
 
-
 .header {
     background: #242f40;
     color: #FFFAFF;
     padding: 20px 30px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
+    display: grid;
     grid-area: header;
+    grid-template-columns: repeat(1, 100%);
     box-shadow: 0 0 12px 0 #888;
 }
 
@@ -28,16 +25,20 @@ img {
 }
 
 .headerNav {
-    align-self: stretch;
     display: flex;
     align-items: center;
-    margin-left: auto;
+    justify-content: flex-end;
+    justify-self: center;
+    margin-top: 20px;
 }
 
 .headerNav ul {
     display: flex;
     align-items: flex-end;
     margin-bottom: 0;
+    margin-left: 0;
+    min-width: 220px;
+    justify-content: space-between;
 }
 
 .headerNav a {
@@ -54,4 +55,19 @@ img {
 .siteLink {
     box-shadow: none;
     display: flex;
+    justify-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    .siteLink {
+        justify-self: left;
+    }
+
+    .headerNav {
+        justify-self: right;
+    }
 }

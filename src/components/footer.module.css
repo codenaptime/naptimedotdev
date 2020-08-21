@@ -2,36 +2,47 @@
     padding: 30px 30px 20px;
     margin-top: auto;
     grid-area: footer;
-    display: flex;
+    display: grid;
     align-items: center;
+    width: 100vw;
 }
 
 .footer a {
     box-shadow: none;
 }
 
-.footer h2 {
-    font-size: 1.2rem;
-}
-
 .emailHeader {
     margin: 10px;
+    justify-self: end;
+    font-size: 1rem;
+}
+
+.emailButton {
+    align-self: center;
+    height: 25px;
+}
+
+.emailIcon {
+    align-self: center;
+    height: 25px;
 }
 
 .followHeader {
-    margin: 10px 0 10px auto;
+    margin: 10px auto;
+    font-size: 1.5rem;
 }
-
 
 .footerNav {
     display: grid;
-    justify-content: end;
 }
 
 .footerNav ul {
     display: grid;
     grid-template-columns: repeat(2, 50px) repeat(3, 45px);
     margin-bottom: 0;
+    margin-left: 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .footerIcon {
@@ -51,11 +62,33 @@
 
 .footer img, .footer svg {
     transition: all .2s linear;
-    height: 35px;
     padding: 3px;
 }
+
+.footer li img, .footer li svg {
+    height: 35px;
+}
+
+
 
 .footer img:hover, .footer svg:hover {
     background: #FFF;
     box-shadow: 0 0 10px 6px #FFF;
+}
+
+.footer {
+    margin-left: 0;
+}
+
+.footerEmail {
+    grid-area: email;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footerSocialMedia {
+    grid-area: social-media;
+    display: grid;
+    justify-content: center;
 }
