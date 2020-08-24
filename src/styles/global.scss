@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "blog-styles.scss";
+@import "../components/404.scss";
 
 body,
 html {
@@ -10,15 +11,12 @@ html {
 }
 
 #gatsby-focus-wrapper {
-    min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr repeat(3, 3fr) 1fr;
     grid-template-areas:
-        "header"
-        "main"
-        "actions"
-        "footer";
-}
+        "header header header"
+        "main main main"
+        "footer footer footer";
+ }
 
 a {
     color: $brown;
@@ -47,7 +45,6 @@ footer {
 }
 
 aside {
-    display: none;
     margin-top: 95px;
     grid-area: aside;
 }
@@ -59,12 +56,6 @@ aside {
 
 
 @media only screen and (min-width: 768px) {
-}
-
-@media only screen and (min-width: 959px){
-    aside {
-        display: none;
-    }
     #gatsby-focus-wrapper {
         grid-template-areas:
             "header header header header header"
@@ -74,6 +65,23 @@ aside {
     }
 }
 
+@media only screen and (min-width: 959px){
+
+    #gatsby-focus-wrapper {
+        grid-template-areas:
+            "header header header header header"
+            "actions main main main aside "
+            "footer footer footer footer footer";
+        grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    }
+}
+
 @media only screen and (min-width: 1199px){
-     
+    #gatsby-focus-wrapper {
+        grid-template-areas:
+            "header header header header header"
+            "actions main main main aside "
+            "footer footer footer footer footer";
+        grid-template-columns: 1fr repeat(3, 1fr) 1fr;
+    } 
 }
