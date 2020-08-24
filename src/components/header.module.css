@@ -5,11 +5,11 @@ img {
 .header {
     background: #242f40;
     color: #FFFAFF;
-    padding: 20px 30px 25px;
+    padding: 20px 15px 25px 15px;
     display: grid;
     grid-area: header;
-    grid-template-columns: repeat(1, 100%);
     box-shadow: 0 0 12px 0 #888;
+    grid-template-columns: 1fr 80px;
 }
 
 .titleTag {
@@ -17,6 +17,7 @@ img {
     text-align: left;
     color: #FFFAFF;
 }
+
 .headerOne {
     font-size: 1.6rem;
     color: #FFF07C;
@@ -28,24 +29,21 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    justify-self: center;
-    margin-top: 20px;
 }
 
 .headerNav ul {
     display: flex;
-    align-items: flex-end;
     margin-bottom: 0;
     margin-left: 0;
     min-width: 220px;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .headerNav a {
     color: #FFFAFF;
     transition: all .3s ease;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 0 0 10px;
 }
 
 .headerNav a:hover {
@@ -55,12 +53,13 @@ img {
 .siteLink {
     box-shadow: none;
     display: flex;
-    justify-self: center;
+    height: 50px;
 }
 
 @media only screen and (min-width: 768px) {
     .header {
         grid-template-columns: 1fr 1fr;
+        padding: 20px 50px 25px;
     }
  
     .siteLink {

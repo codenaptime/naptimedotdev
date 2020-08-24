@@ -1,0 +1,55 @@
+#four-oh-four {
+  position: relative;
+  width: 400px;
+}
+
+#cartridge {
+  display: grid;
+  grid-template-areas:
+    "edge-one base edge-two"
+    "edge-one cartridge-bottom edge-two";
+  grid-template-columns: 30px 340px 30px;  
+  grid-template-rows: 360px 40px;
+  grid-area: cartridge;
+  height: 360px;
+}
+
+#base {
+  background: gray;  
+
+}
+
+#cartridge-bottom {
+  width: 340px;
+  height: 40px;
+  background: gray;
+  justify-self: center;
+  grid-area: cartridge-bottom;
+}
+
+#notch {
+  height: 25px;
+  width: 50px;
+  background: darkgray;
+  position: absolute;
+  left: 50px;
+}
+
+#edge-one {
+  grid-area: edge-one;
+}
+
+#edge-two {
+  grid-area: edge-two;
+}
+
+.edge {
+  height: 355px;
+  margin-top: 5px;
+  border: 2px solid darkgray;
+  background: gray;
+}
+
+.ridge {
+
+}
